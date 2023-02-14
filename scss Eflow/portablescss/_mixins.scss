@@ -1,0 +1,54 @@
+@import 'portablescss/variables.scss';
+@import 'portablescss/colors.scss';
+
+
+%a-tag,%a-tag:visited{
+    color:$a-tag;
+    font-size: 13px;
+    font-family: "Nunito",Tahoma,sans-serif;
+}
+
+%a-leave,
+%a-leave:hover,
+%a-leave:focus,
+%a-leave:visited{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+%a-tag:hover,%a-tag:focus{
+    color: $hover-tag;
+}
+
+@mixin direction($type,$track){
+    display: flex;
+    flex-direction: $type;
+    justify-content: $track;
+}
+
+@mixin shop_input($width){
+    width: $width;
+    height: 54px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(110, 110, 110);
+    padding-left: 10px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    box-sizing: border-box;
+    border: 2px solid #cacaca;
+    
+    &:hover,
+    &:focus{
+        border: 1px solid $green;
+    }
+
+    &,
+    &:focus{
+        outline: none;
+    }
+}
