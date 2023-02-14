@@ -1,0 +1,235 @@
+@import 'portablescss/mixins.scss'; //using importable mixins and extends;
+@import 'portablescss/variables.scss'; //using importable variables for all height,width,numbers;
+@import 'portablescss/colors.scss'; // using importable color variables for all websites(Banner,texts,footer,menu...);
+@import 'fa scss/brands.scss';
+@import 'fa scss/fontawesome.scss';
+@import 'fa scss/regular.scss';
+@import 'fa scss/solid.scss';
+@import 'fa scss/v4-shims.scss';
+
+.wish_list_container{
+    width: $pagemainwidth;
+    margin-top: 20px;
+    @include direction(column,center);
+
+    .page_is_empty_mode{
+        user-select: none;
+        width: 100%;
+        height: 350px;
+        @include direction (column,center);
+        align-items: center;
+
+        .deactive{
+            visibility: none;
+            display: none;
+            opacity: 0;
+        }
+
+        .fa-folder-open{
+            font-size: 70px;
+            color: rgb(192, 192, 192);
+        }
+
+        .page_empty_mean{
+            margin-top: 15px;
+            font-size: 25px;
+            color: rgb(192, 192, 192);
+        }
+    }
+
+
+
+    .cards-container {
+            margin-top: 5px;
+            width: $pagemainwidth;
+            max-width: $pagemaxwidth;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+            .products-cards {
+                border-radius: 5px;
+                height: 476px;
+                border: 1px solid rgb(235, 235, 235);
+                transition: box-shadow 0.3s;
+
+                &:hover {
+                    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+                }
+
+                &,
+                &:hover,
+                &:focus,
+                &:visited {
+
+                    outline: none;
+                    cursor: pointer;
+                    text-decoration: none;
+                    user-select: none;
+                }
+
+                .image-container {
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    width: 100%;
+                    height: 290px;
+                    position: relative;
+
+                    .send-to-wish-list {
+                        position: absolute;
+                        width: 35px;
+                        height: 35px;
+                        right: 15px;
+                        top: 15px;
+                        user-select: none;
+                        border-radius: 10px;
+                        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+
+                        .make-wish-product {
+                            @include direction(row, center);
+                            align-items: center;
+                            width: 35px;
+                            height: 35px;
+                            border: none;
+                            outline: none;
+                            background-color: rgb(255, 255, 255);
+                            border-radius: 10px;
+                            cursor: pointer;
+
+                            &:hover,
+                            &:focus,
+                            &:visited {
+
+                                border: none;
+                                outline: none;
+                            }
+
+                            img {
+                                width: 25px;
+                            }
+
+                        }
+                    }
+
+                    .product-image {
+                        width: 100%;
+                        height: 100%;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: fill;
+                            border-top-left-radius: 5px;
+                            border-top-right-radius: 5px;
+                        }
+                    }
+                }
+
+                .card-details-container {
+                    @include direction(column, space-between);
+
+                    padding: 5px 10px 5px 10px;
+                    width: calc(100% - 20px);
+                    height: 176px;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
+                    .deliver-fee {
+                        span {
+                            font-size: 14px;
+                            color: $green;
+                        }
+
+                        .free-deliver {
+                            display: none;
+                        }
+                    }
+
+                    .name-container {
+                        text-decoration: none;
+                        color: black;
+
+                        .product-name {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .rating-details {
+                        @include direction(row, left);
+                        color: $a-tag;
+                        font-size: 14px;
+
+                        .product-bought-container {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .fee-details {
+                        @include direction(row, left);
+                        align-items: center;
+
+                        .discount-persentage-container {
+                            width: 48px;
+                            height: 40px;
+                            background-color: rgb(250, 66, 66);
+                            @include direction(row, center);
+                            align-items: center;
+                            border-radius: 10px;
+                            padding: 0 2px 0 2px;
+                            color: white;
+                            font-size: 16px;
+                            margin-right: 10px;
+
+                            .percentage-num-symbol {
+                                .percentage-num {
+                                    margin: 0 0 0 1px;
+                                    padding: 0;
+                                }
+                            }
+                        }
+
+                        .main-fee {
+                            @include direction(row, center);
+                            align-items: center;
+                            color: #000;
+                            font-size: 22px;
+                            margin-right: 10px;
+
+                            .fee-number {
+                                margin-right: 3px;
+                            }
+                        }
+
+                        .after-discount-fee {
+                            @include direction(row, center);
+                            align-items: center;
+                            color: #000;
+                            font-size: 22px;
+
+                            .discount-fee-number {
+                                margin-right: 3px;
+                            }
+                        }
+
+                        .active-discount {
+                            font-size: 18px;
+                            color: #979696;
+                            margin-right: 0px !important;
+                            text-decoration: line-through;
+
+                            & .fee-number {
+                                margin-right: 0px;
+                            }
+                        }
+
+
+                        .blocked-discount {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+}

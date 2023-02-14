@@ -1,0 +1,615 @@
+@import 'portablescss/mixins.scss'; //using importable mixins and extends;
+@import 'portablescss/variables.scss'; //using importable variables for all height,width,numbers;
+@import 'portablescss/colors.scss'; // using importable color variables for all websites(Banner,texts,footer,menu...);
+@import 'fa scss/brands.scss';
+@import 'fa scss/fontawesome.scss';
+@import 'fa scss/regular.scss';
+@import 'fa scss/solid.scss';
+@import 'fa scss/v4-shims.scss';
+
+html,body{
+    scroll-behavior: smooth !important;
+}
+.shops_register-container{
+    width: 100%;
+    @include direction(column,center);
+    box-sizing: border-box;
+
+    .why_choose_us_container{
+        width:100%;
+        background-image: url('/images/dealer-hero-bg.png');
+    
+        .choose_us-wrapper{
+            width:100%;
+            background-color: #4eb2ff4d;
+            align-items: center;
+            @include direction(row,center);
+
+            .choose_us-inner{
+                width: $pagemainwidth;
+                @include direction(row,space-between);
+                align-items: center;
+
+                .wcu_text_container{
+                    width: 50%;
+                    @include direction(column,left);
+
+                    span{
+                        font-size: 35px;
+                        font-weight: 500;
+                        margin-bottom: 15px;
+                    }
+                    
+                    .main-reasons-texts{
+                        font-size: 17px;
+                    }
+
+                    .go-to-register{
+                        @include direction(row, center);
+                        align-items: center;
+                        width: 180px;
+                        height: 50px;
+                        border: none;
+                        outline: none;
+                        background-color: $green;
+                        color: white;
+                        box-sizing: border-box;
+                        font-size: 19px;
+                        border-radius: 10px;
+                        text-decoration: none;
+
+                        &:hover{
+                            text-decoration: none;
+                            background-color:#24861d;
+                        }
+
+                        &:hover,
+                        &:visited,
+                        &:focus{
+                            border:none;
+                            outline: none;
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+
+                }
+
+                .wcu_img{
+                    width: 50%;
+                    @include direction(column, center);
+                    align-items: center;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .how_to_start_selling-container{
+        width: 100%;
+        background-image: url('../images/parallax-image.jpg');
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .how_to_start_selling_hero{
+            width: 100%;
+            height: 500px;
+            @include direction(row, right);
+
+            .how_to_start_selling-inner{
+                width: 50%;
+                height: auto;
+                @include direction(column, space-around);
+                padding: 40px 0 40px 0;
+                background-color: rgba(255, 255, 255, 0.4);
+
+                .start-selling-card-container{
+                    width: 100%;
+                    @include direction(row, space-around);
+
+                    
+                    .map-card{
+                        @include direction(row,space-around);
+                        width: 240px;
+                        height: 140px;
+                        background-color: rgba(255, 255, 255, 0.8);
+
+                        .help-seller-card-container{
+                            width: 60px;
+                            height: 100%;
+                            margin-left: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            align-items: center;
+
+                            img{
+                                width: 70px;
+                                height: 70px;
+                            }
+                        }
+                        
+                        .help-seller-card-text{
+                            width: 60px;
+                            height: 100%;
+                            margin-left: 20px;
+                            font-size: 16px;
+                            @include direction(column, center);
+                            align-items: center;
+                        }
+
+                        .help-seller-card-number{
+                            width: 60px;
+                            height: 100%;
+                            margin-left: 10px;
+                            
+                            .help-seller-text{
+                                width: 60px;
+                                height: 100%;
+                                font-size: 80px;
+                                font-weight: 900;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: flex-end;
+                                color: rgba(116, 116, 116, 0.308);
+                            }
+                        }
+                    }
+                }
+
+                .start-selling-card-container-second-part{
+                    width: 100%;
+                    @include direction(row, space-around);
+
+                    .map-card{
+                        @include direction(row,space-around);
+                        width: 240px;
+                        height: 140px;
+                        background-color: rgba(255, 255, 255, 0.8);
+
+                        .help-seller-card-container{
+                            width: 60px;
+                            height: 100%;
+                            margin-left: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            align-items: center;
+
+                            img{
+                                width: 65px;
+                                height: 65px;
+                            }
+                        }
+                        
+                        .help-seller-card-text{
+                            width: 60px;
+                            height: 100%;
+                            font-size: 16px;
+                            margin-left: 20px;
+                            @include direction(column, center);
+                            align-items: center;
+                        }
+
+                        .help-seller-card-number{
+                            width: 60px;
+                            height: 100%;
+                            margin-left: 15px;
+                            
+                            .help-seller-text{
+                                width: 60px;
+                                height: 100%;
+                                font-size: 80px;
+                                font-weight: 900;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: flex-end;
+                                color: rgba(116, 116, 116, 0.308);
+                            }
+                        }
+                    }
+                    .map-card-2_2{
+                        @include direction(row,space-around);
+                        width: 240px;
+                        height: 140px;
+                        background-color: rgba(255, 255, 255, 0.8);
+
+                        .help-seller-card-container{
+                            width: 60px;
+                            height: 100%;
+                            margin-left: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            align-items: center;
+
+                            img{
+                                width: 70px;
+                                height: 70px;
+                            }
+                        }
+                        
+                        .help-seller-card-text{
+                            width: 60px;
+                            height: 100%;
+                            font-size: 16px;
+                            margin-left: 20px;
+                            @include direction(column, center);
+                            align-items: center;
+                        }
+
+                        .help-seller-card-number{
+                            width: 60px;
+                            height: 100%;
+                            margin-left: 15px;
+                            
+                            .help-seller-text{
+                                width: 60px;
+                                height: 100%;
+                                font-size: 80px;
+                                font-weight: 900;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: flex-end;
+                                color: rgba(116, 116, 116, 0.308);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .form-container-outter{
+        width: 100%;
+        @include direction(column,center);
+        align-items: center;
+        margin-top: 20px;
+
+        .form-container-inner{
+            width: $pagemainwidth;
+            @include direction(column,center);
+            align-items: center;
+
+            .first-line{
+                font-size: 28px;
+                text-align: center;
+                color: $green;
+                margin-top: 10px;
+                margin-bottom: 35px;
+                font-weight: 600;
+                user-select: none;
+                letter-spacing: 1px;
+            }
+
+            .second-line{
+                width: 90%;
+                @include direction(column,center);
+                align-items: center;
+                margin-bottom: 20px;
+
+                .reg-first-line{
+                    width: 90%;
+                    @include direction(row,space-between);
+
+                    .shop-name{
+                        box-sizing: border-box;
+                        @include shop-input(46%);
+                    }
+
+                    .choose-city-container {
+                        width: 46%;
+                        height: 54px;
+                        border-radius: 10px;
+                        @include direction(column, left);
+                        user-select: none;
+                        box-sizing: border-box;
+                        &.active .options {
+                        display: block;
+                        }
+
+                        &.active .select-city-container .arrow-image i {
+                        transform: rotate(-180deg);
+                        }
+
+                        .select-city-container {
+                        width: 99.4%;
+                        height: 54px;
+                        @include direction(row, space-between);
+                        align-items: center;
+                        background-color: white;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        order: 0;
+                        border: 2px solid #cacaca;
+
+                        .track-icon {
+                        width: 30px;
+                        height: 30px;
+                        margin-left: 10px;
+                        @include direction(row, center);
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: white;
+
+                        .fa-solid {
+                            color: #8E8E8E;
+                        }
+                        }
+
+                        .main-option-container {
+                        width: 80%;
+                        height: 50px;
+                        overflow: hidden;
+                        @include direction(row, left);
+                        align-items: center;
+                        color: rgb(148, 148, 148);
+                        font-size: 16px;
+                        font-weight: 500;
+                        letter-spacing: 0.5px;
+                        position: relative;
+                        order: 0;
+                        margin-left: 10px;
+                        }
+
+                        .arrow-image {
+                        margin-right: 10px;
+
+                        i {
+                            transition: 0.2s;
+                        }
+
+                        .fa-angle-down {
+                            color: #8E8E8E;
+                            font-weight: 600;
+                            font-size: 20px;
+                        }
+                        }
+                        }
+
+                        .options {
+                            display: none;
+                            z-index: 1;
+                            position: relative;
+                            margin-top: 0px;
+                            border-radius: 10px;
+                            background-color: white;
+                            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+                            .option {
+                                display: flex;
+                                flex-direction: left;
+                                height: 45px;
+                                cursor: pointer;
+                                padding: 0 20px;
+                                align-items: center;
+                                border-radius: 10px;
+
+                                &:hover {
+                                    background: $green;
+                                    .option-text{
+                                        color: white;
+                                    }
+                                }
+
+                                .option-text {
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    color: rgb(110, 110, 110);
+                                    letter-spacing: 1.5px;
+                                    word-spacing: 1px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .third-line{
+                width: 90%;
+                align-items: center;
+                margin-bottom: 20px;
+                @include direction(column,center);
+
+                .third-first-line{
+                    width: 90%;
+                    margin-bottom: 20px;
+                    @include direction(row,space-between);
+
+                    .boss-name{
+                        @include shop-input(46%);
+                    }
+
+                    .boss-surname{
+                        @include shop-input(46%);
+                    }
+                }
+
+                .third-second-line{
+                    width: 90%;
+                    @include direction(row,space-between);
+
+                    .boss-email{
+                        @include shop-input(46%);
+                    }
+
+                    .boss-phone{
+                        @include shop-input(46%);
+                    }
+                }
+            }
+
+            .fourth-line{
+                width: 90%;
+                align-items: center;
+                margin-bottom: 20px;
+                @include direction(column,center);
+
+                .rotation-point{
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    @include shop-input(90%);
+                    resize: none;
+                    height: 200px !important;
+                }
+            }
+
+            .fifth-line{
+                width: 90%;
+                align-items: center;
+                margin-bottom: 20px;
+                @include direction(column,center);
+
+                .label_info{
+                    width: 90%;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                    @include direction(row,left);
+
+                    label{
+                        font-size: 19px;
+                        font-weight: 500;
+                        color: rgb(110, 110, 110);
+                    }
+                }
+
+                .log-pass-container{
+                    width: 90%;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    @include direction(row,space-between);
+
+                    .shop_login{
+                        @include shop-input(46%);
+                    }
+                    .log_in_pass_container{
+                        width: 46%;
+                        height: 54px;
+                        border-radius: 10px;
+                        @include direction(row,space-between);
+                        align-items: center;
+                        letter-spacing: 0.5px;
+                        word-spacing: 1px;
+                        box-sizing: border-box;
+                        border: 2px solid #cacaca;
+                        padding-left: 10px;
+                        padding-right: 5px;
+                        margin-bottom: 10px;
+    
+    
+                        &:hover,
+                        &:focus-within{
+                            border: 1px solid $green;                            
+                        }
+    
+                        .fa-lock{
+                            font-size: 23px;
+                            color: $green;
+                        }
+    
+                        .fa-toggler-custom:hover,
+                        .fa-toggler-custom:focus{
+                            cursor: pointer;
+                        }
+
+                        .user_log_in_pass{
+                            display: flex;
+                            align-items: center;
+                            width: calc(100% - 60px);
+                            height: 48px;
+                            border-radius: 15px;
+                            box-sizing: border-box;
+                            font-size: 16px;
+                            padding-top: 1px;
+    
+                            &,
+                            &:hover,
+                            &:focus,
+                            &:visited{
+                                outline: none;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sixth-line{
+                width: 90%;
+                align-items: center;
+                margin-bottom: 20px;
+                @include direction(column,center);
+
+                .fifth-line-left{
+                    width: 90%;
+                    @include direction(row,left);
+                    align-items: center;
+
+                    label{
+                        font-size: 19px;
+                        font-weight: 500;
+                        color: rgb(0, 0, 0);
+                        margin-right: 10px;
+                        user-select: none;
+
+                        a{
+                            outline: none;
+                            color: $hover-tag;
+
+                            &:hover,
+                            &:focus{
+                                border:none;
+                                outline: none;
+                            }
+                        }
+                    }
+
+                    input{
+                        border: none;
+                        outline: none;
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+
+                .fifth-line-right{
+                    width: 90%;
+                    @include direction(row,right);
+                    align-items: center;
+
+                    button{
+                        width: 190px;
+                        height: 50px;
+                        background-color: $green;
+                        cursor: pointer;
+                        color: white;
+                        font-size: 18px;
+                        border-radius: 10px;
+                        outline: none;
+                        border: none;
+
+                        &:hover{
+                            background-color: #24861d;
+                        }
+
+                        &:hover,
+                        &:focus{
+                            border:none;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+}

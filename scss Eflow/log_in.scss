@@ -1,0 +1,430 @@
+@import 'portablescss/mixins.scss'; //using importable mixins and extends;
+@import 'portablescss/variables.scss'; //using importable variables for all height,width,numbers;
+@import 'portablescss/colors.scss'; // using importable color variables for all websites(Banner,texts,footer,menu...);
+@import 'fa scss/brands.scss';
+@import 'fa scss/fontawesome.scss';
+@import 'fa scss/regular.scss';
+@import 'fa scss/solid.scss';
+@import 'fa scss/v4-shims.scss';
+
+
+.log_in_container{
+    width: $pagemainwidth;
+    @include direction(column, center);
+    margin-top: 20px;
+
+
+    .log_in_wrapper{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        @include direction(column,center);
+        align-items: center;
+
+        .log_in_text_container{
+            margin-bottom: 20px;
+
+            .log_in_text{
+                font-size: 30px;
+                color: #000;
+            }
+        }
+
+        .log_in_form_container{
+            width: 100%;
+            @include direction(column,center);
+            align-items: center;
+
+            .log_in_form{
+                width: 50%;
+                @include direction(column,center);
+                align-items: center;
+
+                .log_in_email_container{
+                    width: 100%;
+                    height: 50px;
+                    box-sizing: border-box;
+                    border-radius: 15px;
+                    @include direction(row,space-between);
+                    align-items: center;
+                    border: 1px solid $a-tag;
+                    padding-left: 10px; 
+                    margin-bottom: 15px;
+
+                    &:hover,
+                    &:focus-within{
+                        border: 1px solid $green;                            
+                    }
+
+                    .fa-user{
+                        font-size: 23px;
+                        color: $green;
+                    }
+
+                    .user_log_in_email{
+                        width: calc(100% - 32px);
+                        height: 48px;
+                        border-radius: 15px;
+                        box-sizing: border-box;
+                        font-size: 16px;
+                        padding-top: 1px;
+
+                        &,
+                        &:hover,
+                        &:focus,
+                        &:visited{
+                            outline: none;
+                            border: none;
+                        }
+                    }
+                }
+
+                .log_in_pass_container{
+                    width: 100%;
+                    height: 50px;
+                    box-sizing: border-box;
+                    border-radius: 15px;
+                    @include direction(row,space-between);
+                    align-items: center;
+                    border: 1px solid $a-tag;
+                    padding-left: 10px;
+                    padding-right: 5px;
+                    margin-bottom: 10px;
+
+
+                    &:hover,
+                    &:focus-within{
+                        border: 1px solid $green;                            
+                    }
+
+                    .fa-lock{
+                        font-size: 23px;
+                        color: $green;
+                    }
+
+                    .user_log_in_pass{
+                        display: flex;
+                        align-items: center;
+                        width: calc(100% - 60px);
+                        height: 48px;
+                        border-radius: 15px;
+                        box-sizing: border-box;
+                        font-size: 16px;
+                        padding-top: 1px;
+
+                        &,
+                        &:hover,
+                        &:focus,
+                        &:visited{
+                            outline: none;
+                            border: none;
+                        }
+                    }
+                }
+
+                .error_message{
+                    width: 100%;
+                    display: none;
+                    color: red;
+                    font-size: 16px;
+                    font-weight: 600;
+                    letter-spacing: 0.8px;
+                    word-spacing: 1px;
+                    user-select: none;
+                    transition-property: display;
+                    transition-duration: 1s;
+                }
+            }
+        }
+        
+        .log_in_details_and_problems{
+            width: 100%;
+            @include direction(row, space-between);
+            align-items: center;
+            user-select: none;
+
+            .forgot_pass{
+            text-decoration: underline;
+
+            &:hover,
+            &:focus{
+                cursor: pointer;
+                text-decoration: none;
+            }
+            
+            }
+
+            .log_in-button{
+                width: 140px;
+                height: 45px;
+                border-radius: 10px;
+                box-sizing: border-box;
+                background-color: $green;
+                color: white;
+                letter-spacing: 0.8px;
+                word-spacing: 1px;
+                cursor: pointer;
+                user-select: none;
+                font-size: 15px;
+                margin-top: 10px;
+                
+                &:hover,
+                &:focus{
+                    background-color: #389131;
+                }
+
+                &,
+                &:hover,
+                &:focus,
+                &:visited{
+                    border: none;
+                    outline: none;
+                }
+            }
+        }      
+
+        .forgot_password_form{
+            width: $pagemainwidth;
+            margin-top: 40px;
+            align-items: center;
+            display: none;
+
+            .forgot_password_container{
+                width: 100%;
+                @include direction(column, center);
+                align-items: center;
+
+                .forgot_pass_text{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+
+                .forget_log_in_email_container{
+                    width: 58.5%;
+                    border: 1px solid #000;
+                    border-radius: 15px;
+                    margin-bottom: 15px;
+                    box-sizing: border-box;
+                    @include direction(row, center);
+                    align-items: center;
+
+                    .fa-envelope{
+                        margin-left: 10px;
+                        margin-right: 8px;
+                        font-size: 24px;
+                        color: $green;
+                    } 
+
+                    .forget_log_in_email{
+                        width: 100%;
+                        height: 48px;
+                        border-radius: 15px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+
+                        &:hover,
+                        &:focus-within{
+                            border: 1px solid $green;                            
+                        }
+
+                        &,
+                        &:hover,
+                        &:focus,
+                        &:visited{
+                            outline: none;
+                            border: none;
+                        }
+                        
+                    }
+                }
+
+                .send_forget_user_mail_container{
+                    width: 58.5%;
+                    display: flex;
+                    justify-content: right;
+
+                    .send_forget_user_mail{
+                    width: 140px;
+                    height: 45px;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    background-color: $green;
+                    color: white;
+                    letter-spacing: 0.8px;
+                    word-spacing: 1px;
+                    cursor: pointer;
+                    user-select: none;
+                    font-size: 15px;
+                    
+                    &:hover,
+                    &:focus{
+                        background-color: #389131;
+                    }
+    
+                    &,
+                    &:hover,
+                    &:focus,
+                    &:visited{
+                        border: none;
+                        outline: none;
+                    }
+                    }
+            }
+            }
+        }
+
+        .or_post_request{
+            width: 100%;
+            margin: 30px 0 10px 0;
+            @include direction(column,center);
+            align-items: center;
+            user-select: none;
+    
+            .or_text_container{
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+    
+                .or_text{
+                    font-size: 20px;
+                }
+            }
+    
+            .fbregister{
+                width: 35%;
+                height: 50px;
+                margin-top: 10px;
+                border-radius: 15px;
+    
+                button{
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                    background-color: rgb(24,90,163);
+                    border-radius: 15px;
+                    cursor: pointer;
+    
+                    &:hover,
+                    &:focus{
+                        background-color: rgb(16, 76, 145);
+                    }
+    
+                    &,
+                    &:hover,
+                    &:focus,
+                    &:visited{
+                        outline: none;
+                        border: none;
+                        
+                    }
+    
+                    .fa-facebook-f{
+                        margin-left: 10px;
+                        color: white;
+                        font-size: 16px;
+                    }
+    
+                    .f_text{
+                        width: 100%;
+                        color: white;
+                        letter-spacing: 0.6px;
+                        word-spacing: 1px;
+                        font-size: 16px;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        align-self: center;
+                    }
+                }
+            }
+    
+            .gg_register{
+                width: 35%;
+                height: 50px;
+                margin-top: 10px;
+                border-radius: 15px;
+    
+                button{
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                    background-color: white;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    border: 1px solid #8a8a8a;
+    
+                    &:hover,
+                    &:focus{
+                        background-color: rgb(240, 240, 240);
+                    }
+    
+                    &,
+                    &:hover,
+                    &:focus,
+                    &:visited{
+                        outline: none;
+                        
+                    }
+    
+                    .google-logo{
+                        margin-left: 8px;
+                        width: 17px;
+                        height: 17px;
+    
+                        img{
+                            width: 100%;
+                            height: 100%;
+    
+                        }
+                    }
+    
+                    .g_text{
+                        width: 100%;
+                        color: rgb(65, 65, 65);
+                        letter-spacing: 0.6px;
+                        word-spacing: 1px;
+                        font-size: 16px;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        align-self: center;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .user_register_link_container{
+                width: 35%;
+                height: 50px;
+                margin-top: 10px;
+                border-radius: 15px;
+                background-color: #E37C33;
+                cursor: pointer;
+
+                &:hover,
+                &:focus{
+                    background-color: #d36c23;
+                }
+
+                .user_register_link{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px;
+                    @include direction(row,center);
+                    align-items: center;
+                    color: white;
+                    letter-spacing: 0.7px;
+                    word-spacing: 1px;
+                    @extend %a-leave;
+                
+                }
+            }
+        }
+    }
+}

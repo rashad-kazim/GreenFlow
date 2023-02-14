@@ -1,0 +1,89 @@
+@import 'portablescss/mixins.scss'; //using importable mixins and extends;
+@import 'portablescss/variables.scss'; //using importable variables for all height,width,numbers;
+@import 'portablescss/colors.scss'; // using importable color variables for all websites(Banner,texts,footer,menu...);
+@import 'fa scss/brands.scss';
+@import 'fa scss/fontawesome.scss';
+@import 'fa scss/regular.scss';
+@import 'fa scss/solid.scss';
+@import 'fa scss/v4-shims.scss';
+
+.user-main-container{
+    width: $pagemainwidth;
+    height: auto;
+    @include direction(column,center);
+    align-items: center;
+
+    .user-main-inner{
+        width: 100%;
+        margin-top: 20px;
+        @include direction(row,space-between);
+        align-items: flex-start;
+        
+        .user-left-menu-container{
+            width: 300px;
+            @include direction(column,center);
+            align-items: flex-start;
+            box-sizing: border-box;
+
+            .main-user-menu{
+                width: 100%;
+                @include direction(column, left);
+
+                .user-menu-item{
+                    width: 100%;
+                    line-height: 50px;
+                    border-radius: 5px;
+                    list-style: none;
+                    display: flex;
+                    @include direction(row,left);
+                    align-items: center;
+                    margin: 2px 0;
+
+                    a{  
+                        user-select: none;
+                        @include direction(row,left);
+                        align-items: center;
+                        padding-left: 5px;
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+                        color: black;
+                        font-size: 16px;
+                        font-weight: 500;
+                        border-radius: 5px;
+
+                        .fa-regular,
+                        .fa-solid{
+                            font-size: 16px;
+                            margin-left: 5px;
+                            margin-right: 8px;
+                            color: rgb(51, 51, 51);
+                        }
+                    }
+                    a:hover{
+                        background-color: rgb(235, 235, 235);
+                    }
+                }
+
+                .active-menu-link{
+                    background-color: $green !important;
+                    color: white !important;
+                    
+                    .fa-regular,
+                    .fa-solid{
+                        color: white !important;
+                    }
+                }
+            }
+        }
+
+        .user-right-container{
+            width: calc(100% - 320px);
+            height: 400px;
+            margin-top: 2px;
+            border: 1px solid #000;
+            height: 800px;
+        }
+    }
+}

@@ -1,0 +1,328 @@
+@import 'portablescss/mixins.scss'; //using importable mixins and extends;
+@import 'portablescss/variables.scss'; //using importable variables for all height,width,numbers;
+@import 'portablescss/colors.scss'; // using importable color variables for all websites(Banner,texts,footer,menu...);
+@import 'fa scss/brands.scss';
+@import 'fa scss/fontawesome.scss';
+@import 'fa scss/regular.scss';
+@import 'fa scss/solid.scss';
+@import 'fa scss/v4-shims.scss';
+
+.user-register_form_container{
+    width: $pagemainwidth;
+    margin-top: 20px;
+    @include direction(column,center);
+
+    .new_user-container{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        @include direction(column,center);
+        align-items: center;
+
+        h1{
+            font-size: 28px;
+            color: #000;
+        }
+    }
+
+    .new_user_register_form_container{
+        width: 100%;
+        @include direction(column,center);
+        align-items: center;
+
+        .new_user_register_form{
+            width: 50%;  
+            @include direction(column,center);
+            align-items: center;
+
+        .sign_up_name_surname_container{
+                width: 100%;
+                height: 50px;
+                box-sizing: border-box;
+                border-radius: 15px;
+                @include direction(row,space-between);
+                align-items: center;
+                border: 1px solid $a-tag;
+                padding-left: 10px; 
+                margin-bottom: 15px;
+
+                &:hover,
+                &:focus-within{
+                    border: 1px solid $green;                            
+                }
+
+                .fa-user{
+                    font-size: 23px;
+                    color: $green;
+                }
+
+                .input{
+                    width: calc(100% - 32px);
+                    height: 48px;
+                    border-radius: 15px;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    padding-top: 1px;
+
+                    &,
+                    &:hover,
+                    &:focus,
+                    &:visited{
+                        outline: none;
+                        border: none;
+                    }
+                }
+        }
+
+        .sign_up_email_container{
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            @include direction(row,space-between);
+            align-items: center;
+            border: 1px solid $a-tag;
+            padding-left: 10px; 
+            margin-bottom: 15px;
+
+            &:hover,
+            &:focus-within{
+                border: 1px solid $green;                            
+            }
+
+            .fa-envelope{
+                font-size: 23px;
+                color: $green;
+            }
+
+            .input{
+                width: calc(100% - 32px);
+                height: 48px;
+                border-radius: 15px;
+                box-sizing: border-box;
+                font-size: 16px;
+                padding-top: 1px;
+
+                &,
+                &:hover,
+                &:focus,
+                &:visited{
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+
+        .sign_up_pass_container{
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            @include direction(row,space-between);
+            align-items: center;
+            border: 1px solid $a-tag;
+            padding-left: 10px; 
+            padding-right: 10px;
+            margin-bottom: 15px;
+
+
+            &:hover,
+            &:focus-within{
+                border: 1px solid $green;                            
+            }
+
+            .fa-lock{
+                font-size: 23px;
+                color: $green;
+            }
+
+            .input{
+                display: flex;
+                align-items: center;
+                width: calc(100% - 55px);
+                height: 48px;
+                border-radius: 15px;
+                box-sizing: border-box;
+                font-size: 16px;
+                padding-top: 1px;
+
+                &,
+                &:hover,
+                &:focus,
+                &:visited{
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+        
+        .already_have_account{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            user-select: none;
+            
+            a:visited{
+                color: $hover-tag;
+            }
+
+            a:hover,
+            a:focus{
+                color: #006faf;
+            }
+        }
+
+        button{
+            width: 70%;
+            height: 55px;
+            border-radius: 10px;
+            background-color: $green;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+
+            &:hover{
+                background-color: #389131;
+            }
+
+            &,
+            &:hover,
+            &:focus,
+            &:visited{
+                border: none;
+                outline: none;
+            }
+        }
+
+    }
+    }
+    
+    .or_post_request{
+        width: 100%;
+        margin: 30px 0;
+        @include direction(column,center);
+        align-items: center;
+        user-select: none;
+
+        .or_text_container{
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+
+            .or_text{
+                font-size: 20px;
+            }
+        }
+
+        .fbregister{
+            width: 35%;
+            height: 50px;
+            margin-top: 10px;
+            border-radius: 15px;
+
+            button{
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+                background-color: rgb(24,90,163);
+                border-radius: 15px;
+                cursor: pointer;
+
+                &:hover,
+                &:focus{
+                    background-color: rgb(16, 76, 145);
+                }
+
+                &,
+                &:hover,
+                &:focus,
+                &:visited{
+                    outline: none;
+                    border: none;
+                    
+                }
+
+                .fa-facebook-f{
+                    margin-left: 10px;
+                    color: white;
+                    font-size: 16px;
+                }
+
+                .f_text{
+                    width: 100%;
+                    color: white;
+                    letter-spacing: 0.6px;
+                    word-spacing: 1px;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-self: center;
+                }
+            }
+        }
+
+        .gg_register{
+            width: 35%;
+            height: 50px;
+            margin-top: 10px;
+            border-radius: 15px;
+
+            button{
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+                background-color: white;
+                border-radius: 15px;
+                cursor: pointer;
+                border: 1px solid #8a8a8a;
+
+                &:hover,
+                &:focus{
+                    background-color: rgb(240, 240, 240);
+                }
+
+                &,
+                &:hover,
+                &:focus,
+                &:visited{
+                    outline: none;
+                    
+                }
+
+                .google-logo{
+                    margin-left: 8px;
+                    width: 17px;
+                    height: 17px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+
+                    }
+                }
+
+                .g_text{
+                    width: 100%;
+                    color: rgb(65, 65, 65);
+                    letter-spacing: 0.6px;
+                    word-spacing: 1px;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-self: center;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
